@@ -3,6 +3,7 @@ var playState = {
 	create: function(){
 
 		  socket = io.connect()
+      setEventHandlers();   
 
       //-----------CREATE GAMEWORLD---------//
       //game.stage.backgroundColor = "#ffffff";
