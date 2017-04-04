@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* CSS Document */
+img{border:0;}
+#wrapper{ background-color:#FFF;}
+.default-wrapper{ height:100vh; color:#505050;}
+
+body{ background-color:#FFFFFF; font-family: 'Open Sans', sans-serif;}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-13, .col-sm-13, .col-md-13, .col-lg-13, .col-xs-14, .col-sm-14, .col-md-14, .col-lg-14, .col-xs-15, .col-sm-15, .col-md-15, .col-lg-15, .col-xs-16, .col-sm-16, .col-md-16, .col-lg-16 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.pd10{ padding-top:10px; }
+.pd20{ padding-top:20px; }
+.pd30{ padding-top:30px; }
+.pd40{ padding-top:40px; }
+.pd50{ padding-top:50px; }
+.pd60{ padding-top:60px; }
+
+h1{ font-size:36px!important; font-weight:700; -webkit-font-smoothing: antialiased; font-family: 'Open Sans', sans-serif;}
+h2{ font-size:36px!important; font-weight:700; -webkit-font-smoothing: antialiased; font-family: 'Open Sans', sans-serif;}
+h3{ font-size:14px!important; font-weight:600; -webkit-font-smoothing: antialiased; letter-spacing:3px; text-transform:uppercase; }
+h4{ font-size:22px!important; font-weight:600; -webkit-font-smoothing: antialiased; font-family: 'Open Sans', sans-serif; padding:5px 0px 5px 0px;}
+h5{ font-size:28px!important; font-weight:600; -webkit-font-smoothing: antialiased; font-family: 'Open Sans', sans-serif; }
+
+.white{ color:#FFF; }
+.grey{ color:#D8D8D8; }
+
+li{font-size:18px; font-weight:500; -webkit-font-smoothing: antialiased; font-family: 'Open Sans Condensed', sans-serif; color:#FFF; list-style:none; padding-left:10px; }
+
+#whatwedo{ position:absolute; top:30px; left:40px;}
+#coffee{ position:absolute; bottom:40px; left:260px; z-index:11;}
+
+#viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:url('../_images/milk_tea.png') 0 0 no-repeat;
+  background-size:250px auto;
+  background-position:bottom left;
+  bottom:-45px;
+  left:40px;
+  z-index:10;
+}
+
+#viewport .smoke {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  background:url('../_images/smoke-texture.png') no-repeat;
+  bottom: 150px; /* distance from cup */
+  margin-left:0px
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #666666;
+    margin: 1em 20px;
+    padding: 0; 
+}
+
+.fe_container {
+	padding-top:10px;
+    width: 98%;
+    font-weight: 300;
+    color: #333;
+    margin: 0 auto;
+    height: 250px!important;
+}
+
+/* XMAS UPDATE */
+
+#snow{
+	background: none;
+	font-family: Androgyne;
+	background-image: url('../_images/s1.png'), url('../_images/s2.png'), url('../_images/s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: snow 8s linear infinite;
+	-moz-animation: snow 8s linear infinite;
+	-ms-animation: snow 8s linear infinite;
+	animation: snow 8s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}	
+
+
+
+.date{ font-size:34px; font-weight:700; text-transform:uppercase; color:#FAFAFA; opacity:0.9; padding-top:10px; }
+.sports-bg{ background-image:url(../_images/gCEOPsV.jpg); background-position:center top; background-size:cover; background-repeat:no-repeat; }
+
+#hello {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    text-align: center;
+}
+#hello:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#mini {
+    height : 0px;
+    width : 92%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+
+.fullscreen-bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	object-fit:contain;
+}
+
+
+
+/*_______MEDIA QUERIES_______*/
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+
+
+
+#play{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}

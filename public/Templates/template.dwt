@@ -1,0 +1,83 @@
+<!doctype html>
+<html><head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="_images/favicon.ico" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+
+	<!-- TemplateBeginEditable name="metadescription" -->
+    <meta property="og:description" name="Description" content="Description"/>
+    <meta property="og:url" content="http://www.url-here.com/" />
+    <meta property="og:title" content="Title" /> 
+    <meta property="og:type" content="website" /> 
+    <!-- TemplateEndEditable -->
+
+	<!-- TemplateBeginEditable name="doctitle" -->
+    <title>Raveshoe Group | Gibson Printing</title>
+    <!-- TemplateEndEditable -->
+
+	<!-- Bootstrap Framework-->
+    <!--<link href="../_css/bootstrap.css" rel="stylesheet">-->
+    <link href="../_css/bootstrap.min.css" rel="stylesheet">
+    <link href="../_css/theme.css" rel="stylesheet">
+    <link href="../_css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="_js/plugins/html5shiv.js"></script>
+      <script src="_js/plugins/respond.min.js"></script>
+    <![endif]-->
+    
+	<!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<div id="wrapper">
+
+
+<!-- Header -->
+
+<!-- header end -->
+
+
+
+<!-- TemplateBeginEditable name="mainContent" -->
+
+<div class="default-wrapper">
+  <div class="container">
+	<div class="row">
+     
+    
+      <div class="col-sm-12 col-md-12">&nbsp;</div>
+   
+	</div>
+  </div>
+</div>
+
+<!-- TemplateEndEditable -->
+
+
+
+<!-- Footer -->
+
+<!-- footer end -->
+
+
+</div><!-- wrapper end -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+<!-- TemplateBeginEditable name="footer" -->
+
+<!-- TemplateEndEditable -->
+
+
+</body>
+</html>
