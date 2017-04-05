@@ -326,7 +326,7 @@ function onNewBMD (data) {
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     //DO NOTHING
   }else{
-    if(data == undefined){
+    if(data == null){
       //Do Nothing
     }else{
       bmd.draw('brush', data.x - 16, data.y - 16);
