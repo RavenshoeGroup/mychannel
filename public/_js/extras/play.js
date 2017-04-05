@@ -323,8 +323,12 @@ function onRemovePlayer (data) {
 
 // Remove player
 function onNewBMD (data) {
-  bmd.draw('brush', data.x - 16, data.y - 16);
-  bmd.alphaMask('surprise', data);
+  if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+    //DO NOTHING
+  }else{
+    bmd.draw('brush', data.x - 16, data.y - 16);
+    bmd.alphaMask('surprise', data);
+  }  
 }
 
 
@@ -353,11 +357,7 @@ function getRandomInt(min, max) {
 
 function paint(pointer, x, y) {
     if (pointer.isDown){
-      if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
-        //DO NOTHING
-      }else{
-        sendBMDToServer(x,y);
-      }
+      sendBMDToServer(x,y);
       // bmd.draw('brush', x - 16, y - 16);
       // bmd.alphaMask('surprise', bmd);        
     }
