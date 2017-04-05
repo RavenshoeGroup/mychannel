@@ -321,6 +321,7 @@ function onRemovePlayer (data) {
 }
 
 
+
 // New BMD
 function onNewBMD (data) {
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
@@ -328,9 +329,11 @@ function onNewBMD (data) {
   }else{
     if(data == null){
       //Do Nothing
-    }else{
-      bmd.draw('brush', data.x - 16, data.y - 16);
-      bmd.alphaMask('surprise', bmd);
+    }else{      
+      setTimeout(function(){ 
+        bmd.draw('brush', data.x - 16, data.y - 16);
+        bmd.alphaMask('surprise', bmd); 
+      }, 100);        
     }
   }  
 }
@@ -369,5 +372,6 @@ function paint(pointer, x, y) {
 
 
 function sendBMDToServer(x,y) {
-    socket.emit('new bmd', { x: x, y: y })
+    setTimeout(function(){ socket.emit('new bmd', { x: x, y: y }), 100);    
 }
+
