@@ -34,9 +34,8 @@ var playState = {
 
 
       //-----------NEW LOCAL PLAYER---------//
-      if(playerCount == 2){
-        player = new LocalPlayer(game);
-      }
+      player = new LocalPlayer(game);
+      
 
 
 
