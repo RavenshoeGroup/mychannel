@@ -34,7 +34,7 @@ var playState = {
 
 
       //-----------NEW LOCAL PLAYER---------//
-      player = new LocalPlayer(game);
+      player = new LocalPlayer(game,playerCount);
       
 
 

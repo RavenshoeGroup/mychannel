@@ -1,11 +1,15 @@
 /* global game */
 
-var LocalPlayer = function (game) {
+var LocalPlayer = function (game,playerCount) {
   // The base of our player
   //var startX = Math.round(Math.random() * (1000) - 500)
   //var startY = Math.round(Math.random() * (1000) - 500)
 
-  this.player = game.add.sprite(250, 250, 'player')          
+  if(playerCount == 2){
+    this.player = game.add.sprite(250, 250, 'player')         
+  }else{
+    this.player = game.add.sprite(0, 0, 'empty')     
+  } 
 
   // this.player.scale.setTo(0.5, 0.5);
   this.player.scale.setTo(scaleRatio, scaleRatio);
