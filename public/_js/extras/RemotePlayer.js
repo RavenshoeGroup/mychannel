@@ -9,6 +9,8 @@ var RemotePlayer = function (index, game, startX, startY, startAngle, startUsern
   this.game = game
   this.alive = true
 
+  this.player = game.add.sprite(250, 250, 'player')   
+
   // this.player.scale.setTo(0.5, 0.5);
   this.player.scale.setTo(scaleRatio, scaleRatio);
   //this.player.anchor.setTo(0.5, 0.5)
@@ -18,6 +20,7 @@ var RemotePlayer = function (index, game, startX, startY, startAngle, startUsern
   
   game.physics.enable(this.player, Phaser.Physics.ARCADE);
   this.player.enableBody = true; 
+  this.player.name = index.toString()
   this.player.body.maxVelocity.setTo(400, 400)
   this.player.body.immovable = true
   this.player.body.collideWorldBounds = true

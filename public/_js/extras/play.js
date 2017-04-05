@@ -2,8 +2,8 @@ var playState = {
 
 	create: function(){
 
-		  socket = io.connect()
-      setEventHandlers();   
+		  // socket = io.connect()
+      // setEventHandlers();   
 
       //-----------CREATE GAMEWORLD---------//
       //game.stage.backgroundColor = "#ffffff";
@@ -235,7 +235,6 @@ function onSocketConnected () {
 function onLobbyJoined () {
   console.log('Lobby Joined')
 
-
   // Reset enemies on reconnect
   enemies.forEach(function (enemy) {
     enemy.player.kill()
@@ -243,7 +242,8 @@ function onLobbyJoined () {
   enemies = []
 
   // Send local player data to the game server
-  socket.emit('new player', { x: player.x, y: player.y, angle: player.angle, username: player.username })
+  // console.log(player.player.x + ' ' + player.player.y + ' ' + player.player.angle + ' ' + username)
+  socket.emit('new player', { x: player.player.x, y: player.player.y, angle: player.player.angle, username: username })
 }
 
 
@@ -256,7 +256,7 @@ function onSocketDisconnect () {
 // New player
 function onNewPlayer (data) {
   console.log('New player connected: ', data.id)
-  console.log('Total Players: ', data.num_of_players)
+  //console.log('Total Players: ', data.num_of_players)
   //console.log('New player uses: ', data.ver)
 
   //AVOID DUPLICATE PLAYERS AS WELL AS LOCAL PLAYER
