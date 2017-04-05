@@ -12,7 +12,7 @@ var LocalPlayer = function (game) {
   //this.player.anchor.setTo(0.5, 0.5)
   this.player.animations.add('move', [0], 0, true)
   this.player.animations.add('stop', [0], 0, true)
-  this.player.frame = 9;
+  this.player.frame = 0;
   
   game.physics.enable(this.player, Phaser.Physics.ARCADE);
   this.player.enableBody = true; 
@@ -20,11 +20,9 @@ var LocalPlayer = function (game) {
   this.player.body.immovable = true
   this.player.body.collideWorldBounds = true
 
-  this.username = 'John Smith'
-
   // This will force it to decelerate and limit its speed
   //this.player.body.drag.setTo(200, 200)
-  // this.player.body.drag.setTo(200)
+  this.player.body.drag.setTo(200)
 
   // var barConfig = {x: -5, y: 0};
   // this.healthbar = new HealthBar(game, barConfig);
@@ -34,7 +32,7 @@ var LocalPlayer = function (game) {
 }
 
 
-LocalPlayer.prototype.update = function (shipEmitter) {  
+LocalPlayer.prototype.update = function () {  
 
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
 
@@ -84,7 +82,7 @@ LocalPlayer.prototype.update = function (shipEmitter) {
 
 
   //NEW CODE TO EMIT
-  this.newServerUpdate = { x: this.player.x, y: this.player.y, angle: this.player.angle, username: this.username }
+  this.newServerUpdate = { x: this.player.x, y: this.player.y, angle: this.player.angle, username: username }
   this.sendToServer(this.newServerUpdate);
 
 

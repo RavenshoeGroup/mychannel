@@ -34,7 +34,9 @@ var playState = {
 
 
       //-----------NEW LOCAL PLAYER---------//
-      player = new LocalPlayer(game);
+      if(num_of_players == 2){
+        player = new LocalPlayer(game);
+      }
 
 
 
@@ -281,7 +283,7 @@ function onMovePlayer (data) {
     return
   }
 
-  console.log('player moved')
+  //console.log('player moved')
   // Update player position
   movePlayer.player.x = data.x
   movePlayer.player.y = data.y
