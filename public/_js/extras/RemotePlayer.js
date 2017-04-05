@@ -12,7 +12,9 @@ var RemotePlayer = function (index, game, startX, startY, startAngle, startUsern
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     this.player = this.game.add.sprite(0, 0, 'empty')   
   }else{
-    this.player = this.game.add.sprite(250, 250, 'player') 
+    // USE THIS FOR REAL PLAYER
+    // this.player = this.game.add.sprite(250, 250, 'player') 
+    this.player = this.game.add.sprite(250, 250, 'empty') 
   }   
 
 

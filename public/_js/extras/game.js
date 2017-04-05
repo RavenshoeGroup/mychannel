@@ -25,6 +25,7 @@ var emitter = null
 var currentSpeed = 0
 var playerCount = 0
 var username = 'John Smith'
+var bmd;
 
 
 game.state.add('boot',bootState);

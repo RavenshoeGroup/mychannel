@@ -6,6 +6,8 @@ var loadState = {
 		game.load.atlas('arcade', '_js/extras/assets/arcade-joystick.png', '_js/extras/assets/arcade-joystick.json');
 		game.load.spritesheet('player', '_js/extras/assets/ball.png', 10, 10);
 		game.load.spritesheet('empty', '_js/extras/assets/1x1.png', 1, 1);
+		game.load.spritesheet('surprise', '_js/extras/assets/surprise.jpg', 1000, 1000);
+		game.load.spritesheet('brush', '_js/extras/assets/brush.png', 64, 64);
 
 	},
 

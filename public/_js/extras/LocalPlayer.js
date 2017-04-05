@@ -9,6 +9,8 @@ var LocalPlayer = function (game,playerCount) {
     if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
       this.player = game.add.sprite(0, 0, 'empty')   
     }else{
+      // USE THIS FOR REAL PLAYER
+      // this.player = game.add.sprite(250, 250, 'player') 
       this.player = game.add.sprite(250, 250, 'player') 
     }            
   }else{

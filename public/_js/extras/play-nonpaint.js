@@ -183,7 +183,7 @@ var playState = {
 
     //-----------PAINT---------//
     if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
-      if(stick1.isDown){
+      if(stick2.isDown){
         game.input.addMoveCallback(paint, this);
       }
     }else{
@@ -229,9 +229,6 @@ var setEventHandlers = function () {
 
   // Player removed message received
   socket.on('remove player', onRemovePlayer)
-
-  // New BMD message received
-  socket.on('new bmd', onNewBMD)
   
   socket.on('player count', function(data) {
       playerCount = data.num_of_players;
@@ -321,13 +318,6 @@ function onRemovePlayer (data) {
 }
 
 
-// Remove player
-function onNewBMD (data) {
-  bmd.draw('brush', data.x - 16, data.y - 16);
-  bmd.alphaMask('surprise', data);
-}
-
-
 // Find player by ID
 function playerById (id) {
   for (var i = 0; i < enemies.length; i++) {
@@ -355,11 +345,5 @@ function paint(pointer, x, y) {
     if (pointer.isDown){
         bmd.draw('brush', x - 16, y - 16);
         bmd.alphaMask('surprise', bmd);
-        sendBMDToServer(x,y);
     }
-}
-
-
-function sendBMDToServer(x,y) {
-    socket.emit('new bmd', { x: x, y: y })
 }
