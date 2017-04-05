@@ -9,7 +9,12 @@ var RemotePlayer = function (index, game, startX, startY, startAngle, startUsern
   this.game = game
   this.alive = true
 
-  this.player = this.game.add.sprite(250, 250, 'player')   
+  if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+    this.player = this.game.add.sprite(0, 0, 'empty')   
+  }else{
+    this.player = this.game.add.sprite(250, 250, 'player') 
+  }   
+
 
   // this.player.scale.setTo(0.5, 0.5);
   this.player.scale.setTo(scaleRatio, scaleRatio);
