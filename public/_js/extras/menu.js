@@ -8,9 +8,7 @@ var menuState = {
 	},
 
 	update: function(){
-		if(playerCount == 2){
-	 		game.state.start('play');
-		}
+		game.state.start('play');
 	}
 
 };
