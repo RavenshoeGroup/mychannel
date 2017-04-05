@@ -321,13 +321,17 @@ function onRemovePlayer (data) {
 }
 
 
-// Remove player
+// New BMD
 function onNewBMD (data) {
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     //DO NOTHING
   }else{
-    bmd.draw('brush', data.x - 16, data.y - 16);
-    bmd.alphaMask('surprise', data);
+    if(data == undefined){
+      //Do Nothing
+    }else{
+      bmd.draw('brush', data.x - 16, data.y - 16);
+      bmd.alphaMask('surprise', data);
+    }
   }  
 }
 
