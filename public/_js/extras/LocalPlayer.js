@@ -6,7 +6,11 @@ var LocalPlayer = function (game,playerCount) {
   //var startY = Math.round(Math.random() * (1000) - 500)
 
   if(playerCount == 2){
-    this.player = game.add.sprite(250, 250, 'player')         
+    if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+      this.player = game.add.sprite(0, 0, 'empty')   
+    }else{
+      this.player = game.add.sprite(250, 250, 'player') 
+    }            
   }else{
     this.player = game.add.sprite(0, 0, 'empty')     
   } 
