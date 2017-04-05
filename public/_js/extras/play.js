@@ -330,7 +330,7 @@ function onNewBMD (data) {
       //Do Nothing
     }else{
       bmd.draw('brush', data.x - 16, data.y - 16);
-      bmd.alphaMask('surprise', data);
+      bmd.alphaMask('surprise', bmd);
     }
   }  
 }
