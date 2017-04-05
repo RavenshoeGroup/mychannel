@@ -371,7 +371,7 @@ function paint(pointer, x, y) {
 }
 
 
-function sendBMDToServer(x,y) {
-    setTimeout(function(){ socket.emit('new bmd', { x: x, y: y })}, 100);        
+function sendBMDToServer(x,y){
+    socket.emit('new bmd', { x: x, y: y })      
 }
 
