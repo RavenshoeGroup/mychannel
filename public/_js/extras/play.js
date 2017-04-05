@@ -34,7 +34,7 @@ var playState = {
 
 
       //-----------NEW LOCAL PLAYER---------//
-      if(num_of_players == 2){
+      if(playerCount == 2){
         player = new LocalPlayer(game);
       }
 
