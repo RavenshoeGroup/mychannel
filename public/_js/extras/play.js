@@ -353,9 +353,13 @@ function getRandomInt(min, max) {
 
 function paint(pointer, x, y) {
     if (pointer.isDown){
-        bmd.draw('brush', x - 16, y - 16);
-        bmd.alphaMask('surprise', bmd);
+      if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+        //DO NOTHING
+      }else{
         sendBMDToServer(x,y);
+      }
+      // bmd.draw('brush', x - 16, y - 16);
+      // bmd.alphaMask('surprise', bmd);        
     }
 }
 
