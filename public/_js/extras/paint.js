@@ -22,6 +22,7 @@ function preload() {
 
 
 function create() {
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
   socket = io.connect()
   setEventHandlers();   
