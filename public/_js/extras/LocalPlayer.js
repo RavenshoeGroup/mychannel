@@ -11,28 +11,28 @@ var LocalPlayer = function (game,playerCount) {
     }else{
       // USE THIS FOR REAL PLAYER
       // this.player = game.add.sprite(250, 250, 'player') 
-      this.player = game.add.sprite(250, 250, 'player') 
+      this.player = game.add.sprite(250, 250, 'empty') 
     }            
   }else{
     this.player = game.add.sprite(0, 0, 'empty')     
   } 
 
   // this.player.scale.setTo(0.5, 0.5);
-  this.player.scale.setTo(scaleRatio, scaleRatio);
+  // this.player.scale.setTo(scaleRatio, scaleRatio);
   //this.player.anchor.setTo(0.5, 0.5)
-  this.player.animations.add('move', [0], 0, true)
-  this.player.animations.add('stop', [0], 0, true)
-  this.player.frame = 0;
+  // this.player.animations.add('move', [0], 0, true)
+  // this.player.animations.add('stop', [0], 0, true)
+  // this.player.frame = 0;
   
-  game.physics.enable(this.player, Phaser.Physics.ARCADE);
-  this.player.enableBody = true; 
-  this.player.body.maxVelocity.setTo(400, 400)
-  this.player.body.immovable = true
-  this.player.body.collideWorldBounds = true
+  // game.physics.enable(this.player, Phaser.Physics.ARCADE);
+  // this.player.enableBody = true; 
+  // this.player.body.maxVelocity.setTo(400, 400)
+  // this.player.body.immovable = true
+  // this.player.body.collideWorldBounds = true
 
   // This will force it to decelerate and limit its speed
   //this.player.body.drag.setTo(200, 200)
-  this.player.body.drag.setTo(200)
+  //this.player.body.drag.setTo(200)
 
   // var barConfig = {x: -5, y: 0};
   // this.healthbar = new HealthBar(game, barConfig);

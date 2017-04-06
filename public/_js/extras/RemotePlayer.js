@@ -7,7 +7,7 @@ var RemotePlayer = function (index, game, startX, startY, startAngle, startUsern
   var username = startUsername
 
   this.game = game
-  this.alive = true
+  // this.alive = true
 
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     this.player = this.game.add.sprite(0, 0, 'empty')   
@@ -19,22 +19,22 @@ var RemotePlayer = function (index, game, startX, startY, startAngle, startUsern
 
 
   // this.player.scale.setTo(0.5, 0.5);
-  this.player.scale.setTo(scaleRatio, scaleRatio);
+  // this.player.scale.setTo(scaleRatio, scaleRatio);
   //this.player.anchor.setTo(0.5, 0.5)
-  this.player.animations.add('move', [0], 0, true)
-  this.player.animations.add('stop', [0], 0, true)
-  this.player.frame = 0;
+  // this.player.animations.add('move', [0], 0, true)
+  // this.player.animations.add('stop', [0], 0, true)
+  // this.player.frame = 0;
   
-  game.physics.enable(this.player, Phaser.Physics.ARCADE);
-  this.player.enableBody = true; 
-  this.player.name = index.toString()
-  this.player.body.maxVelocity.setTo(400, 400)
-  this.player.body.immovable = true
-  this.player.body.collideWorldBounds = true
+  // game.physics.enable(this.player, Phaser.Physics.ARCADE);
+  // this.player.enableBody = true; 
+  // this.player.name = index.toString()
+  // this.player.body.maxVelocity.setTo(400, 400)
+  // this.player.body.immovable = true
+  // this.player.body.collideWorldBounds = true
 
-  this.player.angle = angle
+  // this.player.angle = angle
 
-  this.lastPosition = { x: x, y: y, angle: angle }
+  // this.lastPosition = { x: x, y: y, angle: angle }
   
 }
 

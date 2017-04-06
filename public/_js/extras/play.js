@@ -226,7 +226,7 @@ var setEventHandlers = function () {
   socket.on('lobby joined', onLobbyJoined)
 
   // Player move message received
-  socket.on('move player', onMovePlayer)  
+  // socket.on('move player', onMovePlayer)  
 
   // Player removed message received
   socket.on('remove player', onRemovePlayer)
@@ -287,21 +287,21 @@ function onNewPlayer (data) {
 }
 
 // Move player
-function onMovePlayer (data) {
-  var movePlayer = playerById(data.id)
+// function onMovePlayer (data) {
+//   var movePlayer = playerById(data.id)
 
-  // Player not found
-  if (!movePlayer) {
-    console.log('Player not found: ', data.id)
-    return
-  }
+//   // Player not found
+//   if (!movePlayer) {
+//     console.log('Player not found: ', data.id)
+//     return
+//   }
 
-  //console.log('player moved')
-  // Update player position
-  movePlayer.player.x = data.x
-  movePlayer.player.y = data.y
-  movePlayer.player.angle = data.angle
-}
+//   //console.log('player moved')
+//   // Update player position
+//   movePlayer.player.x = data.x
+//   movePlayer.player.y = data.y
+//   movePlayer.player.angle = data.angle
+// }
 
 
 // Remove player
@@ -332,6 +332,8 @@ function onNewBMD (data) {
     }else{      
       setTimeout(function(){ 
         //bmd.draw('brush', data.x - 16, data.y - 16);
+        brush.x = x
+        brush.y = y
         bmd.alphaMask(surprise, brush); 
       }, 100);        
     }
