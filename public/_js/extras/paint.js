@@ -30,7 +30,7 @@ function create() {
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     pad = game.plugins.add(Phaser.VirtualJoystick);
     stick1 = pad.addStick(0, 0, 100, 'arcade');
-    stick1.scale = 2;
+    stick1.scale = 1;
     stick1.alignBottomLeft(100);
   }else{
     cursor = game.input.keyboard.createCursorKeys();
