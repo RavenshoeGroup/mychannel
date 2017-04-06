@@ -131,17 +131,17 @@ var playState = {
 
 
     //-----------PLAYER UPDATE---------//
-    player.update();
+    //player.update();
 
 
 
 
     //-----------ENEMY UPDATE---------//
-    for(var i = 0; i < enemies.length; i++){
-      if (enemies[i].alive) {
-        enemies[i].update()                          
-      }
-    }  
+    //for(var i = 0; i < enemies.length; i++){
+    //  if (enemies[i].alive) {
+    //    enemies[i].update()                          
+    //  }
+    //}  
 
     
 
