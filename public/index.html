@@ -102,13 +102,13 @@
           <div id="mini">
 		   
     
-            <!-- <div class="ticker"
+            <div class="ticker"
                  data-duration="100"
                  data-loop="1"
                  data-effect="linear"
             >
               <span></span>
-            </div> -->
+            </div>
         </div>
           
           </div>
@@ -127,7 +127,7 @@
                </div>
                <div class="col-md-16" style="background-color:rgba(125,125,125,1.00); height:70%; position:relative; background-image:url(_images/what-we-do-bg.jpg); background-size:cover; background-position:top left;">
                
-               <!--<div id="coffee"><h5 class="white"><em>"Come in and have<br>a coffee with us."</em></h5></div>-->
+               <div id="coffee"><h5 class="white"><em>"Come in and have<br>a coffee with us."</em></h5></div>
                <div id="viewport"></div> 
                </div>
             
@@ -139,14 +139,14 @@
                <div class="col-md-16" style="background-color:#FFFFFF; position:relative;">
               
                <div class="fullscreen-bg">
-                    <!-- <video loop muted autoplay poster="rsgvideo.jpg" class="fullscreen-bg__video">
+                    <video loop muted autoplay poster="rsgvideo.jpg" class="fullscreen-bg__video">
                         <source src="rsgvideo.mp4" type="video/mp4">
-                    </video> -->
+                    </video>
                 </div>
                                
                <div class="col-md-16 text-center" style="height:100%; overflow:visible;">
                
-               <!-- <iframe id="forecast_embed" class="fe_container" type="text/html" frameborder="0" height="100%" width="100%" src="https://forecast.io/embed/#lat=43.843090&lon=-79.308251&name=Markham&units=uk"></iframe> -->
+               <iframe id="forecast_embed" class="fe_container" type="text/html" frameborder="0" height="100%" width="100%" src="https://forecast.io/embed/#lat=43.843090&lon=-79.308251&name=Markham&units=uk"></iframe>
                </div> 
                
                </div>
@@ -200,13 +200,13 @@
 
 
 <script src="_js/lib/jquery.min.js"></script>
-<!-- <script src="_js/plugins/jquery.jticker.js"></script> -->
+<script src="_js/plugins/jquery.jticker.js"></script>
 <script src="_js/plugins/essentials.js"></script>
 <script src="_js/framework/bootstrap.min.js"></script>
 
-<!-- <script>
+<script>
 $('.ticker').jTicker();
-</script> -->
+</script>
 
 <script src="jquery-1.js"></script>
 <script type="text/javascript">
@@ -215,9 +215,9 @@ jQuery.noConflict();
 (function( $ ) {
   $(function(){
     if(!$.browser.msie){  
-      //var a=0;for(;a<10;a+=1){setTimeout(function b(){var a=Math.random()*1e3+5e3,c=$("<div />",{"class":"smoke",css:{opacity:0,left:Math.random()*90+0}});$(c).appendTo("#viewport");$.when($(c).animate({opacity:1},{duration:a/4,easing:"linear",queue:false,complete:function(){$(c).animate({opacity:0},{duration:a/3,easing:"linear",queue:false})}}),$(c).animate({bottom:$("#viewport").height()},{duration:a,easing:"linear",queue:false})).then(function(){$(c).remove();b()})},Math.random()*3e3)}
+      var a=0;for(;a<10;a+=1){setTimeout(function b(){var a=Math.random()*1e3+5e3,c=$("<div />",{"class":"smoke",css:{opacity:0,left:Math.random()*90+0}});$(c).appendTo("#viewport");$.when($(c).animate({opacity:1},{duration:a/4,easing:"linear",queue:false,complete:function(){$(c).animate({opacity:0},{duration:a/3,easing:"linear",queue:false})}}),$(c).animate({bottom:$("#viewport").height()},{duration:a,easing:"linear",queue:false})).then(function(){$(c).remove();b()})},Math.random()*3e3)}
     }else{    
-       //"use strict";var a=0;for(;a<15;a+=1){setTimeout(function b(){var a=Math.random()*1e3+5e3,c=$("<div />",{"class":"smoke",css:{left:Math.random()*90+0}});$(c).appendTo("#viewport");$.when($(c).animate({},{duration:a/4,easing:"linear",queue:false,complete:function(){$(c).animate({},{duration:a/3,easing:"linear",queue:false})}}),$(c).animate({bottom:$("#viewport").height()},{duration:a,easing:"linear",queue:false})).then(function(){$(c).remove();b()})},Math.random()*3e3)}
+       "use strict";var a=0;for(;a<15;a+=1){setTimeout(function b(){var a=Math.random()*1e3+5e3,c=$("<div />",{"class":"smoke",css:{left:Math.random()*90+0}});$(c).appendTo("#viewport");$.when($(c).animate({},{duration:a/4,easing:"linear",queue:false,complete:function(){$(c).animate({},{duration:a/3,easing:"linear",queue:false})}}),$(c).animate({bottom:$("#viewport").height()},{duration:a,easing:"linear",queue:false})).then(function(){$(c).remove();b()})},Math.random()*3e3)}
     }
   }())
 })(jQuery);
