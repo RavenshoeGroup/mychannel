@@ -11,6 +11,7 @@ if(dpr == 1){
   dpr = 1.5
 }
 var scaleRatio = dpr / 3
+var cursor
 
 function preload() {
 
