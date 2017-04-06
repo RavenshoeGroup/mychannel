@@ -332,8 +332,8 @@ function onNewBMD (data) {
     }else{      
       setTimeout(function(){ 
         //bmd.draw('brush', data.x - 16, data.y - 16);
-        brush.x = x
-        brush.y = y
+        brush.x = data.x
+        brush.y = data.y
         bmd.alphaMask(surprise, brush); 
       }, 100);        
     }
