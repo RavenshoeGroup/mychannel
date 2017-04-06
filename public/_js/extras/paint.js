@@ -5,6 +5,12 @@ var bmd
 var stick1
 var pad
 var socket
+var clients
+var dpr = window.devicePixelRatio;
+if(dpr == 1){
+  dpr = 1.5
+}
+var scaleRatio = dpr / 3
 
 function preload() {
 
@@ -20,27 +26,27 @@ function create() {
   setEventHandlers();   
 
   //-----------JOYSTICK FOR MOBILE---------//
-      if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
-        pad = game.plugins.add(Phaser.VirtualJoystick);
-        stick1 = pad.addStick(0, 0, 100, 'arcade');
-        stick1.scale = 2;
-        stick1.alignBottomLeft(100);
-      }else{
-        cursor = game.input.keyboard.createCursorKeys();
-        game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
-      }
+  if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+    pad = game.plugins.add(Phaser.VirtualJoystick);
+    stick1 = pad.addStick(0, 0, 100, 'arcade');
+    stick1.scale = 2;
+    stick1.alignBottomLeft(100);
+  }else{
+    cursor = game.input.keyboard.createCursorKeys();
+    game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
+  }
 
-      //-----------LOBBY JOINED---------//
-      onLobbyJoined();
+  //-----------LOBBY JOINED---------//
+  onLobbyJoined();
 
-      surprise = game.make.sprite(0, 0, 'surprise');
-      brush = game.make.sprite(0, 0, 'brush');
-      bmd = game.make.bitmapData(surprise.width, surprise.height);
-      //bmd.draw('brush',-64,-64)
-      //bmd.alphaMask('surprise', bmd);
-      game.add.sprite(0,0,bmd)
+  surprise = game.make.sprite(0, 0, 'surprise');
+  brush = game.make.sprite(0, 0, 'brush');
+  bmd = game.make.bitmapData(surprise.width, surprise.height);
+  game.add.sprite(0,0,bmd)
 
-      game.input.addMoveCallback(paint, this);
+  game.input.addMoveCallback(paint, this);
+
+  clients = []
 
 }
 
@@ -86,7 +92,8 @@ function onSocketConnected () {
 function onLobbyJoined () {
   console.log('Lobby Joined')
 
-  // Reset enemies on reconnect 
+  // Reset clients on reconnect
+  clients = []
 
   // Send local player data to the game server
   socket.emit('new player')
@@ -104,25 +111,25 @@ function onNewPlayer (data) {
   console.log('New player connected: ', data.id)
 
   //AVOID DUPLICATE PLAYERS AS WELL AS LOCAL PLAYER
-  var duplicate = playerById(data.id)
-  if (duplicate) {
-    console.log('Duplicate player!')
-    return
-  }   
+  // var duplicate = playerById(data.id)
+  // if (duplicate) {
+  //   console.log('Duplicate player!')
+  //   return
+  // }   
 }
 
 
 // Remove player
 function onRemovePlayer (data) {
-  var removePlayer = playerById(data.id)
+  // var removePlayer = playerById(data.id)
 
-  // Player not found
-  if (!removePlayer) {
-    console.log('Player not found: ', data.id)
-    return
-  }
+  // // Player not found
+  // if (!removePlayer) {
+  //   console.log('Player not found: ', data.id)
+  //   return
+  // }
 
-  removePlayer.player.kill()
+  // removePlayer.player.kill()
 }
 
 
@@ -144,9 +151,9 @@ function onNewBMD (data) {
 
 // Find player by ID
 function playerById (id) {
-  for (var i = 0; i < enemies.length; i++) {
-    if (enemies[i].player.name === id) {
-      return enemies[i]
+  for (var i = 0; i < clients.length; i++) {
+    if (clients[i].player.name === id) {
+      return clients[i]
     }
   }
   return false
