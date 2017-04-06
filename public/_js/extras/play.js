@@ -93,10 +93,11 @@ var playState = {
       //-----------INITIALISE MINIMAP---------//
       // minimap = new MiniMap(game);
 
-
-      bmd = game.make.bitmapData(1000, 1000);
-      bmd.draw('brush',-64,-64)
-      bmd.alphaMask('surprise', bmd);
+      surprise = game.make.sprite(0, 0, 'surprise');
+      brush = game.make.sprite(0, 0, 'brush');
+      bmd = game.make.bitmapData(surprise.width, surprise.height);
+      //bmd.draw('brush',-64,-64)
+      //bmd.alphaMask('surprise', bmd);
       game.add.sprite(0,0,bmd)
 
 	},
@@ -131,17 +132,17 @@ var playState = {
 
 
     //-----------PLAYER UPDATE---------//
-    //player.update();
+    // player.update();
 
 
 
 
     //-----------ENEMY UPDATE---------//
-    //for(var i = 0; i < enemies.length; i++){
-    //  if (enemies[i].alive) {
-    //    enemies[i].update()                          
-    //  }
-    //}  
+    // for(var i = 0; i < enemies.length; i++){
+    //   if (enemies[i].alive) {
+    //     enemies[i].update()                          
+    //   }
+    // }  
 
     
 
@@ -321,7 +322,6 @@ function onRemovePlayer (data) {
 }
 
 
-
 // New BMD
 function onNewBMD (data) {
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
@@ -331,8 +331,8 @@ function onNewBMD (data) {
       //Do Nothing
     }else{      
       setTimeout(function(){ 
-        bmd.draw('brush', data.x - 16, data.y - 16);
-        bmd.alphaMask('surprise', bmd); 
+        //bmd.draw('brush', data.x - 16, data.y - 16);
+        bmd.alphaMask(surprise, brush); 
       }, 100);        
     }
   }  
@@ -372,8 +372,8 @@ function paint(pointer, x, y) {
 
 
 function sendBMDToServer(x,y){
-  //setTimeout(function(){ socket.emit('new bmd', { x: x, y: y }); }, 100);  
- socket.emit('new bmd', { x: x, y: y });  
+  // setTimeout(function(){ socket.emit('new bmd', { x: x, y: y }); }, 100);  
+  socket.emit('new bmd', { x: x, y: y });
 }
 
 

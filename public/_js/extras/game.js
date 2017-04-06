@@ -25,7 +25,9 @@ var emitter = null
 var currentSpeed = 0
 var playerCount = 0
 var username = 'John Smith'
-var bmd;
+var bmd
+var brush
+var surprise
 
 
 game.state.add('boot',bootState);
