@@ -23,8 +23,10 @@ function preload() {
 
 function create() {
 
-	socket = io.connect()
+  socket = io.connect()
   setEventHandlers();   
+	
+  game.world.setBounds(0, 0, window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio);
 
   //-----------JOYSTICK FOR MOBILE---------//
   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
