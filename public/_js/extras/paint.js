@@ -55,8 +55,15 @@ function create() {
 
 
 function update() {
-   
-
+   if(/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+    if(stick1.isDown){
+      //Just for visuals
+    }
+  }else{
+    if(game.input.activePointer.isDown){
+      //Just for visuals
+    }
+  }	
 } 
 
 
